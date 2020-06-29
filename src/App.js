@@ -7,7 +7,7 @@ import AppCartoon from './cartoon_comps/appCartoon';
 function App() {
   return (
     <div className="App">
-      App Work
+     
       <AppCartoon/>
       <AppBit/>
     </div>
