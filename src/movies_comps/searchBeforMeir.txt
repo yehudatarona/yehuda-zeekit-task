@@ -1,0 +1,41 @@
+import React, { useRef, useState } from 'react';
+import OMDbApi from './omdbApi';
+function Search(props) {
+    let searchInput = useRef()
+    // let [userInput, setUserInput] = useState("home")
+
+
+    const onInput = () => {
+
+        if (searchInput.current.value === "") {
+            document.getElementById("id_search").className = "container d-flex justify-content-center align-items-center searchBox";
+        }
+        else {
+
+            document.getElementById("id_search").className = "container pt-5";
+            document.getElementById("id_input").className = "form-control w-75 searchBox_input";
+
+        }
+        props.setUserInput(searchInput.current.value);
+
+
+    }
+
+    return (
+        <div className="container d-flex justify-content-center align-items-center searchBox" id="id_search">
+                <input ref={searchInput} onInput={onInput} type="text" placeholder="search ..." className="form-control w-75 searchBox_input" id="id_input" />
+        </div>
+       
+
+        //         <div className="input-group col-md-4  container d-flex justify-content-center align-items-center searchBox">
+        //        <input className="form-control py-2 border-right-0 border" type="text" value="search"/>
+        //             <span className="input-group-append">
+        //               <button className="btn btn-outline-secondary border-left-0 border" type="button">
+        //                     <i className="fa fa-search"></i>
+        //               </button>
+        //             </span>
+        // </div>
+    )
+}
+
+export default Search
