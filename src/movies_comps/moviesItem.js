@@ -11,9 +11,9 @@ function MoviesItem(props) {
             }}
             >
                 {/* <img className="card-img-top" src={item.Poster} alt="Card image cap" /> */}
-                <div className="pic" style={{ backgroundImage: `url(${item.Poster})` }}></div>
+                <div className="pic" style={{ backgroundImage: `url(${item.Poster})`}} ></div>
                 <div className="card-body">
-                    <h5 className="card-title">{item.Title}</h5>
+                    <h5 className="card-title" >{item.Title}</h5>
                     <div className="card-text">{item.Year}</div>
                     {/* <button onClick={() => {
                         props.setOpenDark(true);

@@ -3,7 +3,7 @@ import MoviesItem from './moviesItem';
 function OMDbApi(props) {
     let [movies_arr, setMoviesArr] = useState([]);
     
-    let url = "http://www.omdbapi.com/?s=" + props.userInput + "&apikey=5a292f28";
+    let url = "https://www.omdbapi.com/?s=" + props.userInput + "&apikey=5a292f28";
     useEffect(() => {
         fetch(url)
             .then(resp => resp.json())

@@ -19,12 +19,13 @@
 
 
 .card {
+    height: 370px;
     border-radius: 12px;
     overflow: hidden;
 }
 
-.card .pic {
-    min-height: 270px;
+.pic {
+    height: 270px;
     background-size: cover;
     background-position: top;
 }

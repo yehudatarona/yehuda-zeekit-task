@@ -8,7 +8,7 @@ function DarkBox(props) {
 
     useEffect(() => {
 
-        let url = "http://www.omdbapi.com/?i=" + props.imdbID + "&apikey=5a292f28"
+        let url = "https://www.omdbapi.com/?i=" + props.imdbID + "&apikey=5a292f28"
         fetch(url)
             .then(resp => resp.json())
             .then(data => {
